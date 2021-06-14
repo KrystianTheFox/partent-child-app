@@ -1,7 +1,4 @@
 
-  <div *ngFor="let post of posts">
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.content }}</p>
-    <small>{{ post.author }}</small>
-    <hr>
-  </div>
+    <div *ngFor="let post of posts">
+      <app-post-item [post]="post" (onChange)="onChangeHandle()"></app-post-item>
+    </div>
